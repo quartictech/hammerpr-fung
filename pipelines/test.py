@@ -6,5 +6,5 @@ def raw_dataset() -> "raw/input":
     return FromBucket("quartic_employees.csv")
 
 @step
-def step1(test: "input") -> "output":
+def step1(test: "raw/input") -> "output":
     return writer("Something", "Something").json({})
